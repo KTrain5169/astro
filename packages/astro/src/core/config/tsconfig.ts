@@ -33,6 +33,11 @@ export const presets = new Map<frameworkWithTSSettings, TSConfig>([
 			compilerOptions: {
 				jsx: 'react-jsx',
 				jsxImportSource: 'preact',
+				paths: {
+					react: ['./node_modules/preact/compat'],
+					'react-dom': ['./node_modules/preact/compat'],
+					'react-dom/*': ['./node_modules/preact/compat/*'],
+				}
 			},
 		},
 	],
